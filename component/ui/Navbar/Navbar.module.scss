@@ -1,0 +1,41 @@
+@import '/styles/mixin';
+@import '/styles/colors';
+
+.nav {
+	padding: 15px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	ol {
+		list-style: none;
+		display: flex;
+
+		li {
+			margin: 5px;
+
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: 17px;
+				text-transform: uppercase;
+			}
+		}
+
+		@include for-800 {
+			display: none;
+		}
+	}
+
+	.mobileMenu {
+		display: none;
+		border: 1px solid #2196f3;
+    	background: transparent;
+    	color: #2196f3;
+    	padding: 5px;
+
+		@include for-800 {
+			display: block;
+		}
+	}
+}

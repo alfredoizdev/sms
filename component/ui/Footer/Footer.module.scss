@@ -1,0 +1,61 @@
+@import '/styles/colors';
+@import '/styles/mixin';
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+	padding: 75px 20px;
+	background-color: $primary;
+	margin-top: 20px;
+
+	.footerMenu {
+		margin-top: 10px;
+		h2 {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 5px;
+			color: $blue-dark-100;
+		}
+		ol {
+
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 5px;
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+
+	}
+
+	.footerLocation {
+		margin-top: 10px;
+		margin-left: 25px;
+		h2 {
+			color: $blue-dark-100;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+		p {
+			margin: 0;
+			color: white;
+			margin-bottom: 5px;
+		}
+
+		@include for-500 {
+			margin-left: 0;
+		}
+	}
+
+	@include for-500 {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

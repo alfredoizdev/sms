@@ -1,0 +1,73 @@
+@import '/styles/colors';
+@import '/styles/mixin';
+
+.banner {
+	clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+	// clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 82% 89%, 53% 80%, 21% 84%, 0 87%, 0 0, 21% 0);
+	background-color: $secundary;
+	width: 100%;
+	height: 600px;
+	position: relative;
+    z-index: 100;
+
+	.heroCopy {
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+		margin-left: 40px;
+		h2{
+			color: $primary;
+			font-size: 55px;
+			text-transform: capitalize;
+			line-height: 47px;
+
+			@include for-500 {
+				padding-top: 25px;
+				font-size: 40px;
+				line-height: 37px;
+			}
+		}
+		p {
+			padding: 10px 0px;
+			color: white;
+    		font-size: 17px;
+    		margin: 0;
+			line-height: 20px;
+		}
+
+		.heroAction {
+			button {
+				max-width: 65%;
+			}
+
+			@include for-800 {
+				text-align: center;
+			}
+		}
+
+		@include for-800 {
+			text-align: center;
+			margin: 10px;
+		}
+
+	}
+
+	.heroImg {
+		margin-right: 40px;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 400px;
+		}
+
+		@include for-800 {
+			text-align: center;
+			margin: 10px;
+		}
+	}
+
+	@include for-500 {
+		height: 800px;
+	}
+}

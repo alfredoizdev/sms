@@ -1,0 +1,12 @@
+@import '/styles/colors';
+
+.brand {
+	h2 {
+		font-size: 35px;
+		color: white;
+		letter-spacing: -5px;
+		span {
+			color: $primary;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+@import '/styles/colors';
+@import '/styles/mixin';
+
+.serviceContainer {
+	padding: 20px;
+	position: relative;
+    z-index: 300;
+
+	.services {
+		border-radius: 5px;
+		width: 100%;
+		text-align: center;
+
+
+		.containerIcon {
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin-top: 15px;
+			.serviceIcon {
+				font-size: 50px;
+				color: #0095e5;
+				width: 80px;
+				height: 80px;
+				border: 1px solid #0095e5;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 5px;
+			}
+		}
+
+		article {
+			padding: 10px;
+		}
+
+			h2 {
+				color: $primary;
+				margin: 10px 0;
+			}
+
+			p {
+				color: white;
+				margin: 0;
+			}
+		
+	}
+}
+
+.aboutUsContainer {
+	padding: 10px;
+	margin-top: 40px;
+
+	.aboutUsImg {
+		position: relative;
+		width: 100%;
+		height: 500px;
+
+		img {
+    		object-fit: contain;
+		}
+	}
+
+	.copyAboutUs {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		h2 {
+			color: $primary;
+			font-size: 35px;
+			padding: 10px 0;
+		}
+		p {
+			margin: 0;
+			color: white;
+		}
+
+		@include for-500 {
+			justify-content: center;
+			text-align: center;
+			margin-top: -36px;
+		}
+
+		ol {
+			margin: 0;
+			list-style: none;
+			padding-right:5px;
+
+
+			li {
+
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-align: left;
+				gap: 15px;
+
+				.icon {
+					color: white;
+					font-size: 30px;
+				}
+				.copy {
+					padding: 10px 0;
+						h3 {
+							color: white;
+							font-size: 20px;
+						}
+						span {
+							color: white;
+						}
+				}
+			}
+
+			@include for-500 {
+				padding: 0;
+			}
+		}
+	}
+	@include for-500 {
+		margin-top: 10px;
+	}
+	
+}
